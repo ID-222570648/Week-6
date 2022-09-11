@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title> Week 6 task 2: Vue.js Framework (Handling User Inputs)</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      </head>
+      <!-- Form Input Bindings — Vue.js (vuejs.org) Date accessed: 9/09/2022 -->
+   <body>
+<div id="app">
+    <select v-model = "selected">
+        <option value = "" disabled> Please select one </option>
+        <option v-for = "n in 4"> {{n}}</option>
+    </select>
+    <span> Selected: {{selected}}</span>
+
+    <p>Reflection: v-for dynamically renders value.  <br>
+        The initial value of the options is set to empty.  <br>
+        A disabled option is used with an empty value, because in iOS if the v-model <br>
+        expression does not match any of the options, the user is not able to select the first item. </p>
+        
+
+
+    </body>
+    </html>
+
+<script>
+    var app = new Vue ({
+        el: '#app',
+        data: {
+            selected: '',
+        },
+    });
+    </script>

@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title> Week 6 task 2: Vue.js Framework (Handling User Inputs)</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      </head>
+      <!-- https://v2.vuejs.org/v2/guide/forms.html#Checkbox Date accessed: 9/09/2022 -->
+   <body>
+<div id="app">
+<input type="checkbox" id="checkbox" v-model = "checked" />
+      <label for="checkbox"> {{checked}}</label>
+      <div></div>
+      <input type = "checkbox" id = "samantha" value="Samantha" v-model="checkedNames" />
+      <label for = "samantha" > Samantha</label>
+      <input type = "checkbox" id = "rijia" value="Rijia" v-model="checkedNames" />
+      <label for = "rijia" > Rijia</label>
+      <input type = "checkbox" id = "rodney" value="Rodney" v-model="checkedNames" />
+      <label for = "rodney" > Rodney</label>
+      <input type = "checkbox" id = "james" value="James" v-model="checkedNames" />
+      <label for = "james" > James</label>
+      <input type = "checkbox" id = "hiba" value="Hiba" v-model="checkedNames" />
+      <label for = "hiba" > Hiba</label> <br>
+      <span> Names selected : {{checkedNames}} </span>
+</div>
+<p>Reflection: With checkbox, v-model is used to store bolean value. <br>
+With v-model when using with checkbox, <br>
+arrays can be used and string values will be converted into boolean value</p>
+<script>
+    var app = new Vue ({
+        el: '#app',
+        data: {
+            checked: false,
+            checkedNames: [],
+        }
+    })
+</script>
+</body>
+</html>

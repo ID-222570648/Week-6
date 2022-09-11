@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <title> Week 6: Vue.js Framework (Handling User Inputs)</title>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      
+   </head>
+   <body>
+    <div id="app">
+      <p> Email: </p>
+      <input 
+      v-model="email"
+      placeholder = "Please enter your email" />
+     <p>{{ email }}</p>
+
+     
+      <p> Password </p>
+      <input 
+      v-model="password"
+      placeholder="Please enter password" />
+      <p>{{ password }}</p>
+      </div>
+
+      <p>Reflection: v-model is useful when we need to view the input before submission. <br>
+         It will always treat the Vue instance data as the source of truth. <br>
+         The initial values are declared inside the data option of your component.  
+         inside the data option of your component.</p>
+
+      
+    
+<script>
+   var app = new Vue ({
+   el: '#app',
+   data: {
+      email: 'amoushumi@yahoo.com',
+      password: 'MyTestVue123#',
+      checked: false,
+      checkedNames: [],
+      },
+});
+</script>
+
+
+
+
+<!-- https://v2.vuejs.org/v2/guide/forms.html -->
+   
+
+
+   </body>
+    </html>
